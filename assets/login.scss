@@ -1,0 +1,89 @@
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to top, #e6f7e5, #a0d468);
+
+  .login-container {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0rem 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 22.5rem;
+
+    .logo {
+      width: 6.25rem;
+      margin-bottom: 1.25rem;
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.625rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: #666;
+      margin-bottom: 1.875rem;
+    }
+
+    .input-group {
+      margin-bottom: 1.25rem;
+      position: relative;
+
+      input {
+        width: 100%;
+        padding: 0.625rem;
+        border-radius: 0.5rem;
+        border: 0.0625rem solid #ccc;
+        font-size: 1rem;
+      }
+
+      .password-toggle {
+        position: absolute;
+        right: 0.625rem;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    }
+
+    .login-button {
+      background-color: #5636d3;
+      color: white;
+      font-size: 1rem;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      width: 100%;
+      border: none;
+      cursor: pointer;
+    }
+
+    .forgot-password {
+      display: block;
+      margin-top: 0.625rem;
+      color: #666;
+      font-size: 0.875rem;
+    }
+
+    .sign-up {
+      margin-top: 1.25rem;
+      font-size: 0.875rem;
+
+      a {
+        color: #5636d3;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.admin-contact {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  color: #6c757d;
+}

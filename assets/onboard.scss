@@ -1,0 +1,71 @@
+.onboard-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f9fafb;
+}
+
+.onboard-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 360px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='tel'],
+input[type='email'] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.attachment {
+  display: flex;
+  align-items: center;
+}
+
+.attachment-icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.onboard-button {
+  background-color: #5636d3;
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
