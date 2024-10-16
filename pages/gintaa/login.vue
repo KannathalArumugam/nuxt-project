@@ -70,5 +70,5 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import '/assets/login.scss';
+@import '/assets/login.module.scss';
 </style>

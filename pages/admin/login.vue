@@ -47,12 +47,12 @@ export default {
 </script>
 
 <template>
-  <div class="login-page">
-    <div class="login-container">
+  <div :class="$style.loginPage">
+    <div :class="$style.loginContainer">
       <img
         src="/assets/images/gintaa.jpg"
         alt="Admin Portal Logo"
-        class="logo"
+        :class="$style.logo"
       />
       <h1>Welcome</h1>
       <p>
@@ -60,7 +60,7 @@ export default {
         dashboard.
       </p>
       <form @submit.prevent="otpSent ? verifyOtp() : sendOtp()">
-        <div class="input-group">
+        <div :class="$style.inputGroup">
           <input
             type="tel"
             v-model="mobileNumber"
@@ -72,7 +72,7 @@ export default {
           />
         </div>
         <div
-          class="input-group"
+          :class="$style.inputGroup"
           v-if="otpSent"
         >
           <input
@@ -86,12 +86,12 @@ export default {
         </div>
         <button
           type="submit"
-          class="login-button"
+          :class="$style.loginButton"
         >
           {{ otpSent ? 'Verify OTP' : 'Send OTP' }}
         </button>
       </form>
-      <p class="admin-contact">
+      <p :class="$style.adminContact">
         Need help? Contact
         <a href="mailto:support@example.com">technical support</a>.
       </p>
@@ -99,6 +99,6 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped>
-@import '/assets/login.scss';
+<style lang="scss" module>
+@import '/assets/login.module.scss';
 </style>

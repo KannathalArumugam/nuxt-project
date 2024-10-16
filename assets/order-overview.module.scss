@@ -1,0 +1,86 @@
+.orders-table-container {
+  margin: 0 auto;
+  padding: 1.25rem;
+  background-color: #ffffff;
+  border-radius: 0.625rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 0.625rem;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  text-align: left;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.05);
+}
+
+.orders-table thead th {
+  color: white;
+  padding: 0.9375rem 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.orders-table tbody {
+  background-color: #f8f9fa;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 0.9375rem 0.625rem;
+  font-size: 0.875rem;
+}
+
+.orders-table tbody tr {
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.orders-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.orders-table tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.orders-table tbody tr td {
+  text-align: center;
+}
+
+.partner-link {
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.partner-link:hover {
+  text-decoration: underline;
+}
+
+.table-row {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.table-row:hover {
+  background-color: #f1f3f5;
+  transform: scale(1.01);
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.05);
+}

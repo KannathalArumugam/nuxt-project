@@ -1,8 +1,8 @@
 <template>
-  <header class="admin-header">
+  <header :class="$style.adminHeader">
     <h1>Welcome, {{ adminName }}</h1>
     <button
-      class="logout-btn"
+      :class="$style.logoutBtn"
       @click="redirectToLogout"
     >
       <img
@@ -11,14 +11,16 @@
       />
     </button>
   </header>
-  <div class="admin-body">
-    <nav class="admin-nav">
+  <div :class="$style.adminBody">
+    <nav :class="$style.adminNav">
       <ul>
-        <li><a href="/admin/dashboard">Dashboard</a></li>
-        <li><a href="/admin/deliver-partners">Deliver Partners</a></li>
-        <li><a href="/admin/manage-users">Manage Users</a></li>
-        <li><a href="/admin/orders">Manage Orders</a></li>
-        <li><a href="/admin/settings">Settings</a></li>
+        <li><nuxt-link to="/admin/dashboard">Dashboard</nuxt-link></li>
+        <li>
+          <nuxt-link to="/admin/deliver-partners">Deliver Partners</nuxt-link>
+        </li>
+        <li><nuxt-link to="/admin/manage-users">Manage Users</nuxt-link></li>
+        <li><nuxt-link to="/admin/manage-orders">Manage Orders</nuxt-link></li>
+        <li><nuxt-link to="/admin/settings">Settings</nuxt-link></li>
       </ul>
     </nav>
   </div>
@@ -40,6 +42,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import '/assets/admin-nav.scss';
+<style lang="scss" module>
+@import '/assets/admin-nav.module.scss';
 </style>

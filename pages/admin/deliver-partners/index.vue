@@ -1,8 +1,8 @@
 <template>
   <AdminNav />
-  <div class="deliver-partner-listing">
+  <div :class="$style.deliverPartnerListing">
     <h2>Deliver Partners</h2>
-    <div class="grouping-filters">
+    <div :class="$style.groupingFilters">
       <input
         type="text"
         v-model="searchQuery"
@@ -46,7 +46,7 @@
         >
           <td>{{ partner.firstName }}</td>
           <td>{{ partner.mobile }}</td>
-          <td :class="['status-badge', statusClass(partner.status)]">
+          <td :class="[$style.statusBadge, statusClass(partner.status)]">
             {{ partner.status }}
           </td>
           <td>{{ partner.serviceablePincode }}</td>
@@ -62,12 +62,12 @@
 
     <div
       v-if="showModal"
-      class="modal-overlay"
+      :class="$style.modalOverlay"
       @click.self="closeModal"
     >
-      <div class="modal">
+      <div :class="$style.modal">
         <h5>Partner Details</h5>
-        <div class="deliver-partner-details">
+        <div :class="$style.deliverPartnerDetails">
           <p><strong>First Name:</strong> {{ selectedPartner.firstName }}</p>
           <p><strong>Gender:</strong> {{ selectedPartner.gender }}</p>
           <p><strong>Date of Birth:</strong> {{ selectedPartner.dob }}</p>
@@ -109,7 +109,7 @@
           </ul>
 
           <!-- Profile actions -->
-          <div class="profile-actions">
+          <div :class="$style.profileActions">
             <button @click="requestReupload(selectedPartner.id)">
               Request Document Re-upload
             </button>
@@ -123,7 +123,7 @@
           </div>
 
           <!-- Notes or comments -->
-          <div class="admin-notes">
+          <div :class="$style.adminNotes">
             <textarea
               v-model="adminNotes"
               placeholder="Add notes or comments..."
@@ -322,14 +322,14 @@ export default {
       alert('Notes saved for partner.');
     },
     statusClass(status) {
-      if (status === 'Active') return 'text-green';
-      if (status === 'Inactive') return 'text-red';
-      if (status === 'Pending') return 'text-orange';
+      if (status === 'Active') return this.$style.textGreen;
+      if (status === 'Inactive') return this.$style.textRed;
+      if (status === 'Pending') return this.$style.textOrange;
     }
   }
 };
 </script>
 
-<style lang="scss" scoped>
-@import '/assets/deliver-partners.scss';
+<style lang="scss" module>
+@import '/assets/deliver-partners.module.scss';
 </style>

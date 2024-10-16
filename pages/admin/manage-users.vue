@@ -1,11 +1,11 @@
 <template>
-  <div class="admin-container">
+  <div :class="$style.adminContainer">
     <AdminNav />
 
     <!-- Onboarding Queue Section -->
-    <div class="onboarding-queue">
+    <div :class="$style.onboardingQueue">
       <h2>Onboarding Applications</h2>
-      <div class="filters">
+      <div :class="$style.filters">
         <input
           type="text"
           v-model="searchQuery"
@@ -48,12 +48,17 @@
           >
             <td>{{ partner.name }}</td>
             <td>{{ partner.mobile }}</td>
-            <td :class="['status-badge', statusClass(partner.status)]">
+            <td :class="[$style.statusBadge, statusClass(partner.status)]">
               {{ partner.status }}
             </td>
             <td>{{ partner.submissionDate }}</td>
             <td>
-              <button @click="openDocumentReview(partner)">Review</button>
+              <button
+                :class="$style.reviewBtn"
+                @click="openDocumentReview(partner)"
+              >
+                Review
+              </button>
             </td>
           </tr>
         </tbody>
@@ -63,12 +68,12 @@
     <!-- Document Review Modal -->
     <div
       v-if="showDocumentModal"
-      class="modal-overlay"
+      :class="$style.modalOverlay"
       @click.self="closeDocumentModal"
     >
-      <div class="modal">
+      <div :class="$style.modal">
         <h5>Verify Delivery Partner</h5>
-        <div class="document-review">
+        <div :class="$style.documentReview">
           <p><strong>Name:</strong> {{ selectedPartner.name }}</p>
           <p><strong>Mobile Number:</strong> {{ selectedPartner.mobile }}</p>
 
@@ -87,7 +92,7 @@
           </ul>
 
           <!-- Approval and Rejection Actions -->
-          <div class="actions">
+          <div :class="$style.actions">
             <button @click="approvePartner(selectedPartner.id)">Approve</button>
             <button @click="rejectPartner(selectedPartner.id)">Reject</button>
           </div>
@@ -98,11 +103,16 @@
               v-model="rejectionReason"
               placeholder="Reason for rejection..."
             ></textarea>
-            <button @click="submitRejectionReason">Submit Rejection</button>
+            <button
+              :class="$style.reviewBtn"
+              @click="submitRejectionReason"
+            >
+              Submit Rejection
+            </button>
           </div>
 
           <button
-            class="close"
+            :class="$style.close"
             @click="closeDocumentModal"
           >
             Close
@@ -142,8 +152,29 @@ export default {
             { id: 1, name: 'ID Proof', url: '/path/to/id-proof.pdf' },
             { id: 2, name: 'Address Proof', url: '/path/to/address-proof.pdf' }
           ]
+        },
+        {
+          id: 2,
+          name: 'Jack Doe',
+          mobile: '1889567890',
+          status: 'Active',
+          submissionDate: '2024-09-10',
+          documents: [
+            { id: 1, name: 'ID Proof', url: '/path/to/id-proof.pdf' },
+            { id: 2, name: 'Address Proof', url: '/path/to/address-proof.pdf' }
+          ]
+        },
+        {
+          id: 3,
+          name: 'Will',
+          mobile: '1236789890',
+          status: 'Rejected',
+          submissionDate: '2024-09-10',
+          documents: [
+            { id: 1, name: 'ID Proof', url: '/path/to/id-proof.pdf' },
+            { id: 2, name: 'Address Proof', url: '/path/to/address-proof.pdf' }
+          ]
         }
-        // Additional sample partners...
       ]
     };
   },
@@ -226,14 +257,14 @@ export default {
     },
 
     statusClass(status) {
-      if (status === 'Active') return 'text-green';
-      if (status === 'Rejected') return 'text-red';
-      if (status === 'Pending') return 'text-orange';
+      if (status === 'Active') return this.$style.textGreen;
+      if (status === 'Rejected') return this.$style.textRed;
+      if (status === 'Pending') return this.$style.textOrange;
     }
   }
 };
 </script>
 
-<style lang="scss" scoped>
-@import '/assets/manage-users.scss';
+<style lang="scss" module>
+@import '/assets/manage-users.module.scss';
 </style>

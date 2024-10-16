@@ -1,5 +1,5 @@
 <template>
-  <div class="deliver-partner-profile">
+  <div :class="$style.deliverPartnerProfile">
     <h2>Deliver Partner Profile</h2>
     <div v-if="partner">
       <h3>Personal Information</h3>
@@ -30,6 +30,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import '/assets/deliver-partners.scss';
+<style lang="scss" module>
+@import '/assets/deliver-partners.module.scss';
 </style>

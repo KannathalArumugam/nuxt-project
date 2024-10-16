@@ -1,4 +1,4 @@
-.admin-container {
+.adminContainer {
   background-color: #f8f9fa;
   font-family: Arial, sans-serif;
 
@@ -10,7 +10,7 @@
   }
 }
 
-.onboarding-queue {
+.onboardingQueue {
   margin-left: 12.5rem;
   padding: 1.25rem;
 }
@@ -19,19 +19,19 @@
 .filters {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
-  padding: 15px;
+  margin-bottom: 1.25rem;
+  padding: 0.9375rem;
   background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.5rem;
 
   input,
   select {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    width: 250px;
+    padding: 0.625rem;
+    border-radius: 0.375rem;
+    border: 0.0625rem solid #ccc;
+    font-size: 0.875rem;
+    width: 15.625rem;
 
     &:focus {
       outline: none;
@@ -45,27 +45,35 @@ table {
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 
   thead {
     background-color: #f1f1f1;
 
     th {
-      padding: 12px;
+      padding: 0.75rem;
       text-align: left;
       font-weight: 600;
-      color: #555;
+      color: white;
       cursor: pointer;
 
       &:hover {
-        background-color: #f8f9fa;
+        background-color: #34495e;
       }
 
       span {
-        margin-left: 8px;
-        font-size: 12px;
+        margin-left: 0.5rem;
+        font-size: 0.75rem;
+      }
+    }
+
+    tr {
+      background-color: #34495e;
+
+      &:hover {
+        background-color: #34495e;
       }
     }
   }
@@ -82,42 +90,42 @@ table {
     }
 
     td {
-      padding: 12px;
-      border: 1px solid #ddd;
+      padding: 0.75rem;
+      border: 0.0625rem solid #ddd;
       color: #333;
     }
   }
 }
 
 /* Status Badge Styling */
-.status-badge {
-  padding: 8px 12px;
-  border-radius: 12px;
+.statusBadge {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
   color: #fff;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: capitalize;
 
-  &.text-green {
+  &.textGreen {
     background-color: #28a745;
   }
-  &.text-red {
+  &.textRed {
     background-color: #dc3545;
   }
-  &.text-orange {
+  &.textOrange {
     background-color: #ffc107;
   }
 }
 
 /* Button Styling */
 button {
-  padding: 8px 12px;
+  padding: 0.5rem 0.75rem;
   border: none;
   background-color: #007bff;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
 
   &:hover {
@@ -134,7 +142,7 @@ button {
 }
 
 /* Modal Overlay */
-.modal-overlay {
+.modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -149,25 +157,25 @@ button {
 /* Modal Styling */
 .modal {
   background: #fff;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
   width: 80%;
-  max-width: 600px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 37.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
   position: relative;
 
   h5 {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
     color: #333;
     font-weight: 600;
   }
 
-  .document-review {
+  .documentReview {
     p {
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
       color: #555;
-      font-size: 14px;
+      font-size: 0.875rem;
 
       strong {
         color: #333;
@@ -180,7 +188,7 @@ button {
       padding: 0;
 
       li {
-        margin-bottom: 8px;
+        margin-bottom: 0.5rem;
 
         a {
           color: #007bff;
@@ -195,21 +203,25 @@ button {
   }
 
   .actions {
-    margin-top: 20px;
+    margin-top: 1.25rem;
 
     button {
-      margin-right: 10px;
-      padding: 8px 16px;
+      margin-right: 0.625rem;
+      padding: 0.5rem 1rem;
+      background-color: #1abc9c;
+      &:hover {
+        background-color: #1abc9c;
+      }
     }
   }
 
   .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 0.625rem;
+    right: 0.625rem;
     background-color: transparent;
     border: none;
-    font-size: 18px;
+    font-size: 1.125rem;
     cursor: pointer;
 
     &:hover {
@@ -220,16 +232,23 @@ button {
   /* Rejection Reason Textarea */
   textarea {
     width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    padding: 0.625rem;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid #ccc;
+    font-size: 0.875rem;
+    margin-top: 0.625rem;
+    margin-bottom: 1.25rem;
 
     &:focus {
       outline: none;
       border-color: #007bff;
     }
+  }
+}
+
+.reviewBtn {
+  background-color: #1abc9c;
+  &:hover {
+    background-color: #1abc9c;
   }
 }

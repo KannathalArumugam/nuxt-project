@@ -1,11 +1,11 @@
-.login-page {
+.loginPage {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   background: linear-gradient(to top, #e6f7e5, #a0d468);
 
-  .login-container {
+  .loginContainer {
     background: #fff;
     padding: 2.5rem;
     border-radius: 0.75rem;
@@ -30,7 +30,7 @@
       margin-bottom: 1.875rem;
     }
 
-    .input-group {
+    .inputGroup {
       margin-bottom: 1.25rem;
       position: relative;
 
@@ -51,7 +51,7 @@
       }
     }
 
-    .login-button {
+    .loginButton {
       background-color: #5636d3;
       color: white;
       font-size: 1rem;
@@ -82,7 +82,7 @@
   }
 }
 
-.admin-contact {
+.adminContact {
   margin-top: 1.25rem;
   font-size: 0.875rem;
   color: #6c757d;

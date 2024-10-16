@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   alias: {
     assets: '/<rootDir>/assets'
   },
-  css: ['~/assets/main.scss'],
+  css: ['~/assets/main.module.scss'],
   postcss: {
     plugins: {
       tailwindcss: {},

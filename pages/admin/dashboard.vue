@@ -1,22 +1,22 @@
 <template>
   <AdminNav />
-  <main class="admin-content">
+  <main :class="$style.adminContent">
     <h2>Dashboard</h2>
-    <section class="dashboard-overview">
-      <div class="metrics">
-        <div class="metric">
+    <section :class="$style.dashboardOverview">
+      <div :class="$style.metrics">
+        <div :class="$style.metric">
           <h2>Total Deliver Partners</h2>
           <p>{{ totalPartners }}</p>
         </div>
-        <div class="metric">
+        <div :class="$style.metric">
           <h2>Active Orders</h2>
           <p>{{ activeOrders }}</p>
         </div>
-        <div class="metric">
+        <div :class="$style.metric">
           <h2>Pending Verifications</h2>
           <p>{{ pendingVerifications }}</p>
         </div>
-        <div class="metric">
+        <div :class="$style.metric">
           <h2>Total Revenue</h2>
           <p>{{ totalRevenue }}</p>
         </div>
@@ -24,7 +24,7 @@
     </section>
 
     <!-- Recent Activities -->
-    <section class="recent-activities">
+    <section :class="$style.recentActivities">
       <h2>Recent Activities</h2>
       <ul>
         <li
@@ -37,7 +37,7 @@
     </section>
 
     <!-- Quick Actions -->
-    <section class="quick-actions">
+    <section :class="$style.quickActions">
       <h2>Quick Actions</h2>
       <button @click="addDeliverPartner">Add Deliver Partner</button>
       <button @click="viewPendingVerifications">
@@ -81,6 +81,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-@import '/assets/dashboard.scss';
+<style lang="scss" module>
+@import '/assets/dashboard.module.scss';
 </style>
